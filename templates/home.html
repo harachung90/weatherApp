@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Weather Dashboard in Flask</h2>
-    <form action="{{ url_for('render_results') }}" method="post">
-        Location post code: <input type="text" name="postcode"></br>
-        <input type="submit" value="Submit">
+    <h2 class="weatherText">Weather Dashboard in Flask</h2>
+    <form id="weatherForm" class="weatherText"action="{{ url_for('render_results') }}" method="post">
+        Location post code: <input id="weatherInput" class="weatherText" type="text" name="postcode"></br>
+        <input id="weatherSubmit" class="weatherText" type="submit" value="Submit">
     </form>
 </body>
 </html>
